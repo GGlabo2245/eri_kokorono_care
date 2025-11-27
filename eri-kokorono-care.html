@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心に寄り添う“第3の味方”カウンセリング</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@400;600&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* 基本設定 */
+        body {
+            font-family: 'Zen Maru Gothic', sans-serif; /* 丸みのある優しいフォント */
+            color: #4A4A4A;
+            line-height: 1.8;
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Noto Serif JP', serif; /* 明朝体で真剣さ・繊細さを表現 */
+        }
+        
+        /* 優しいフェードインアニメーション */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 柔らかい背景グラデーション */
+        .bg-soft-gradient {
+            background: linear-gradient(180deg, #FEE9E9 0%, #FFF0EB 100%);
+        }
+
+        /* ボタンのホバーエフェクト */
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-[#FEE9E9]">
+
+    <!-- Header / Navi -->
+    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="text-gray-600 font-bold text-lg tracking-wider">Kokoro no Mikata</div>
+            <a href="#offer" class="bg-[#FF9EAA] text-white px-4 py-2 rounded-full text-sm hover:bg-[#FF8C94] transition duration-300">
+                料金を見る
+            </a>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section (FV) -->
+    <section class="relative pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1516482938124-1b97c8b0b095?q=80&w=2069&auto=format&fit=crop" 
+                 class="w-full h-full object-cover opacity-30" alt="穏やかな窓辺">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#FEE9E9]/80 via-[#FEE9E9]/60 to-[#FEE9E9]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-2xl mx-auto px-6 text-center fade-up">
+            <p class="text-[#FFB6C1] font-medium mb-4 tracking-widest text-sm md:text-base">心に寄り添う“第3の味方”</p>
+            <h1 class="serif text-3xl md:text-5xl leading-tight text-gray-800 mb-8">
+                どれだけ弱い本音でも、<br>
+                ここなら話していい。
+            </h1>
+            <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-sm inline-block mx-auto mb-10 max-w-lg">
+                <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
+                    子育てに追われて誰にも話せない主婦の方へ。<br>
+                    学校でつらい思いをしている学生へ。<br>
+                    話す相手がいないあなたへ。
+                </p>
+                <p class="text-gray-800 font-bold border-t border-gray-200 pt-4">
+                    ここは、“あなたの話を最後まで<br class="md:hidden">ちゃんと聴く場所” です。
+                </p>
+            </div>
+            
+            <div class="flex flex-col items-center gap-3">
+                <a href="#offer" class="btn-primary bg-[#FF9EAA] text-white text-lg font-bold py-4 px-10 rounded-full shadow-lg hover:bg-[#FF8C94] w-full md:w-auto">
+                    まずは料金プランを見てみる
+                </a>
+                <span class="text-xs text-gray-500 flex items-center gap-1">
+                    <i data-lucide="video-off" class="w-3 h-3"></i>
+                    カメラOFFで顔を見せなくても大丈夫です
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Empathy Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-3xl mx-auto px-6 fade-up">
+            <h2 class="serif text-2xl md:text-3xl text-center text-gray-800 mb-12">
+                こんな気持ち、<br>一人で抱え込んでいませんか？
+            </h2>
+            <ul class="space-y-4 md:space-y-6">
+                <li class="flex items-start gap-3 p-4 bg-[#FFF0EB] rounded-lg">
+                    <i data-lucide="check-circle-2" class="w-6 h-6 text-[#FF9EAA] shrink-0 mt-0.5"></i>
+                    <span>子どもが中心の生活で、大人と話す時間がほとんどない</span>
+                </li>
+                <li class="flex items-start gap-3 p-4 bg-[#FFF0EB] rounded-lg">
+                    <i data-lucide="check-circle-2" class="w-6 h-6 text-[#FF9EAA] shrink-0 mt-0.5"></i>
+                    <span>旦那には言えない弱音が溜まって苦しい</span>
+                </li>
+                <li class="flex items-start gap-3 p-4 bg-[#FFF0EB] rounded-lg">
+                    <i data-lucide="check-circle-2" class="w-6 h-6 text-[#FF9EAA] shrink-0 mt-0.5"></i>
+                    <span>学校でいじめられているけど、誰にも本音を言えない</span>
+                </li>
+                <li class="flex items-start gap-3 p-4 bg-[#FFF0EB] rounded-lg">
+                    <i data-lucide="check-circle-2" class="w-6 h-6 text-[#FF9EAA] shrink-0 mt-0.5"></i>
+                    <span>「相談する人がいない」ことが一番つらい</span>
+                </li>
+                <li class="flex items-start gap-3 p-4 bg-[#FFF0EB] rounded-lg">
+                    <i data-lucide="check-circle-2" class="w-6 h-6 text-[#FF9EAA] shrink-0 mt-0.5"></i>
+                    <span>気持ちを言葉にするのが難しくて、自分でも整理できない</span>
+                </li>
+                <li class="flex items-start gap-3 p-4 bg-[#FFF0EB] rounded-lg">
+                    <i data-lucide="check-circle-2" class="w-6 h-6 text-[#FF9EAA] shrink-0 mt-0.5"></i>
+                    <span>そもそも、悩みを話しても迷惑になると思ってしまう</span>
+                </li>
+            </ul>
+            <div class="mt-10 text-center p-6 bg-[#FFF0EB] rounded-xl">
+                <p class="text-[#A85A48] font-medium">
+                    心が限界になるほどがんばってきたあなたを、<br>責める人は誰もいません。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Core Issue Section -->
+    <section class="py-20 bg-[#FF9EAA] text-white text-center px-6">
+        <div class="max-w-3xl mx-auto fade-up">
+            <p class="text-lg opacity-90 mb-4">本当につらいのは、「悩み」そのものよりも、</p>
+            <h2 class="serif text-2xl md:text-4xl font-bold mb-8 leading-relaxed">
+                “相談できる相手がいない孤独” です。
+            </h2>
+            <div class="w-16 h-0.5 bg-white/50 mx-auto mb-8"></div>
+            <p class="leading-loose text-white/90">
+                話せないと心の中で感情が渋滞し、<br>
+                どんどん自分を追い込んでしまう。<br><br>
+                あなたが悪いわけではなく、<br>
+                ただ <span class="font-bold text-white border-b border-white">“安心して話せる場所”</span> が足りなかっただけ。
+            </p>
+        </div>
+    </section>
+
+    <!-- 4. Solution / Features -->
+    <section class="py-20 md:py-28 bg-[#FEE9E9]">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="serif text-center text-2xl md:text-3xl text-gray-800 mb-16 fade-up">
+                誰かに頼れなかった人のための、<br>4つの安心設計
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition fade-up">
+                    <div class="w-12 h-12 bg-[#FFF0EB] rounded-full flex items-center justify-center text-[#FF9EAA] mb-4">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="serif text-xl font-bold mb-3 text-gray-800">話すのが苦手でも大丈夫</h3>
+                    <p class="text-gray-600 text-sm">
+                        無理に引き出したり、否定したりは一切しません。あなたのペースで、言葉にできるところからお話しください。
+                    </p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition fade-up">
+                    <div class="w-12 h-12 bg-[#FFF0EB] rounded-full flex items-center justify-center text-[#FF9EAA] mb-4">
+                        <i data-lucide="ear" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="serif text-xl font-bold mb-3 text-gray-800">とことん “聴く” に徹します</h3>
+                    <p class="text-gray-600 text-sm">
+                        アドバイスを押し付けることはありません。聞き上手なカウンセラーが、相手の心を傷つけずに受け止めます。
+                    </p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition fade-up">
+                    <div class="w-12 h-12 bg-[#FFF0EB] rounded-full flex items-center justify-center text-[#FF9EAA] mb-4">
+                        <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="serif text-xl font-bold mb-3 text-gray-800">泣いても、黙ってもOK</h3>
+                    <p class="text-gray-600 text-sm">
+                        言葉が出ない時間も、ただそばで支えます。沈黙は「自分と向き合う大切な時間」として大切にします。
+                    </p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition fade-up">
+                    <div class="w-12 h-12 bg-[#FFF0EB] rounded-full flex items-center justify-center text-[#FF9EAA] mb-4">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="serif text-xl font-bold mb-3 text-gray-800">幅広い悩みに対応</h3>
+                    <p class="text-gray-600 text-sm">
+                        子育て・学校・人間関係・漠然とした不安。主婦・学生・社会人、どんな立場の方の孤独にも寄り添います。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Before / After -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-6 fade-up">
+            <div class="flex flex-col md:flex-row gap-4 items-stretch">
+                <!-- Before -->
+                <div class="flex-1 bg-gray-100 p-8 rounded-2xl">
+                    <div class="text-center mb-6">
+                        <span class="bg-gray-300 text-gray-600 text-xs font-bold px-3 py-1 rounded-full">Before</span>
+                        <h3 class="serif text-xl mt-2 text-gray-700">今までのあなた</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm text-gray-600">
+                        <li class="flex gap-2"><span class="text-gray-400">●</span>心の中がずっとモヤモヤ</li>
+                        <li class="flex gap-2"><span class="text-gray-400">●</span>誰にも言えないまま抱え込む</li>
+                        <li class="flex gap-2"><span class="text-gray-400">●</span>子どもや家族には弱い自分を見せられない</li>
+                        <li class="flex gap-2"><span class="text-gray-400">●</span>自分の感情が分からなくなる</li>
+                    </ul>
+                </div>
+                <!-- Arrow -->
+                <div class="flex items-center justify-center py-4 md:py-0 md:px-4">
+                    <div class="md:hidden text-[#FF9EAA]"><i data-lucide="arrow-down" class="w-8 h-8"></i></div>
+                    <div class="hidden md:block text-[#FF9EAA]"><i data-lucide="arrow-right" class="w-8 h-8"></i></div>
+                </div>
+                <!-- After -->
+                <div class="flex-1 bg-[#FFF0EB] p-8 rounded-2xl border border-[#FF9EAA]/20 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-[#FF9EAA] opacity-5 rounded-bl-full"></div>
+                    <div class="text-center mb-6 relative z-10">
+                        <span class="bg-[#FF9EAA] text-white text-xs font-bold px-3 py-1 rounded-full">After</span>
+                        <h3 class="serif text-xl mt-2 text-[#A85A48] font-bold">話した後のあなた</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm text-gray-700 relative z-10">
+                        <li class="flex gap-2"><i data-lucide="sun" class="w-5 h-5 text-[#FF9EAA] shrink-0"></i>「話せた」だけで心が軽くなる</li>
+                        <li class="flex gap-2"><i data-lucide="sun" class="w-5 h-5 text-[#FF9EAA] shrink-0"></i>分かってもらえる安心感を得られる</li>
+                        <li class="flex gap-2"><i data-lucide="sun" class="w-5 h-5 text-[#FF9EAA] shrink-0"></i>弱い気持ちを出せる場所ができる</li>
+                        <li class="flex gap-2"><i data-lucide="sun" class="w-5 h-5 text-[#FF9EAA] shrink-0"></i>明日への力が少し湧いてくる</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Profile Section (画像パスを変更しました) -->
+    <section class="py-20 bg-[#FEE9E9]">
+        <div class="max-w-4xl mx-auto px-6 fade-up">
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-sm flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+                
+                <!-- 画像エリア -->
+                <div class="w-40 h-40 md:w-48 md:h-48 shrink-0 rounded-full overflow-hidden bg-gray-100 border-4 border-white shadow-md relative group">
+                     <!-- 
+                        【画像の設定方法】
+                        1. アップロードした画像を「counselor.png」という名前で保存してください。
+                        2. このHTMLファイルと同じフォルダに画像を置いてください。
+                        ※ プレビュー画面では画像が見つからない場合のアイコンが表示されることがありますが、
+                           ファイルをダウンロードして画像と一緒に置けば正しく表示されます。
+                     -->
+                     <img src="./counselor.png" 
+                          onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1888&auto=format&fit=crop'"
+                          alt="カウンセラー" 
+                          class="w-full h-full object-cover">
+                </div>
+
+                <div class="flex-1 text-center md:text-left">
+                    <p class="text-[#FFB6C1] font-bold text-sm mb-2">カウンセラー紹介</p>
+                    <h3 class="serif text-2xl text-gray-800 mb-6">“あなたの話を、<br>最後まで聞く人間でありたい。”</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        大げさなアドバイスではなく、ただ真っ直ぐにあなたの言葉に耳を傾けること。それが私の強みであり、約束です。
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        誰にも言えないまま抱えてきた気持ちも、涙も、沈黙も、否定せず受け止めます。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6 fade-up">
+            <h2 class="serif text-center text-2xl text-gray-800 mb-12">利用者の方から届いた声</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Voice Items -->
+                <div class="bg-[#FEE9E9] p-6 rounded-xl border border-gray-100 relative">
+                    <div class="absolute -top-3 left-6 text-[#FF9EAA] bg-white px-2"><i data-lucide="quote" class="w-5 h-5"></i></div>
+                    <p class="text-gray-600 text-sm leading-relaxed">気持ちを全部聞いてくれる安心感がすごいです。今まで一人で抱えていた重荷を、一緒に持ってもらえた気がしました。</p>
+                </div>
+                <div class="bg-[#FEE9E9] p-6 rounded-xl border border-gray-100 relative">
+                    <div class="absolute -top-3 left-6 text-[#FF9EAA] bg-white px-2"><i data-lucide="quote" class="w-5 h-5"></i></div>
+                    <p class="text-gray-600 text-sm leading-relaxed">子育ての悩みを初めて吐き出せました。家族には言えないことも、ここなら言えると確信できました。</p>
+                </div>
+                <div class="bg-[#FEE9E9] p-6 rounded-xl border border-gray-100 relative">
+                    <div class="absolute -top-3 left-6 text-[#FF9EAA] bg-white px-2"><i data-lucide="quote" class="w-5 h-5"></i></div>
+                    <p class="text-gray-600 text-sm leading-relaxed">学校のことを話しても、怒られずに受け止めてくれました。味方がいるって思うだけで学校に行けそうです。</p>
+                </div>
+                <div class="bg-[#FEE9E9] p-6 rounded-xl border border-gray-100 relative">
+                    <div class="absolute -top-3 left-6 text-[#FF9EAA] bg-white px-2"><i data-lucide="quote" class="w-5 h-5"></i></div>
+                    <p class="text-gray-600 text-sm leading-relaxed">泣きながら話しても優しく待ってくれるので安心できます。話すのが苦手な私でも大丈夫でした。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Pricing Section -->
+    <section id="offer" class="py-20 bg-[#FFF0EB]">
+        <div class="max-w-5xl mx-auto px-6 fade-up">
+            <h2 class="serif text-center text-2xl md:text-3xl text-gray-800 mb-12">料金メニュー</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Plan 1 -->
+                <div class="bg-white rounded-2xl shadow-md border-t-4 border-[#FF9EAA] p-8 hover:shadow-lg transition">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="p-2 bg-[#FFF0EB] rounded-full text-[#FF9EAA]">
+                            <i data-lucide="message-circle" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">チャットのみ(月額)</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="flower-2" class="w-4 h-4 text-[#FF9EAA]"></i>
+                                <span class="text-sm md:text-base">チャットのみ(雑談) 1ヶ月</span>
+                            </div>
+                            <span class="font-bold text-[#FF9EAA]">¥500</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="flower-2" class="w-4 h-4 text-[#FF9EAA]"></i>
+                                <span class="text-sm md:text-base">チャットのみ(相談) 1ヶ月</span>
+                            </div>
+                            <span class="font-bold text-[#FF9EAA]">¥1,000</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-2">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="flower-2" class="w-4 h-4 text-[#FF9EAA]"></i>
+                                <span class="text-sm md:text-base">チャットのみ(雑談+相談) 1ヶ月</span>
+                            </div>
+                            <span class="font-bold text-[#FF9EAA]">¥1,500</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Plan 2 -->
+                <div class="bg-white rounded-2xl shadow-md border-t-4 border-[#FF9EAA] p-8 hover:shadow-lg transition">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="p-2 bg-[#FFF0EB] rounded-full text-[#FF9EAA]">
+                            <i data-lucide="phone" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Zoom・電話(都度料金)</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="flower" class="w-4 h-4 text-[#7BA592]"></i>
+                                <span class="text-sm md:text-base">雑談のみ 15分ごとに</span>
+                            </div>
+                            <span class="font-bold text-[#FF9EAA]">¥500</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-100 pb-2">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="flower" class="w-4 h-4 text-[#7BA592]"></i>
+                                <span class="text-sm md:text-base">相談のみ 15分ごとに</span>
+                            </div>
+                            <span class="font-bold text-[#FF9EAA]">¥1,000</span>
+                        </li>
+                        <li class="flex justify-between items-center pb-2">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="flower" class="w-4 h-4 text-[#7BA592]"></i>
+                                <span class="text-sm md:text-base">雑談+相談 30分ごとに</span>
+                            </div>
+                            <span class="font-bold text-[#FF9EAA]">¥1,500</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="bg-white rounded-2xl shadow-md border-t-4 border-[#FF9EAA] p-8 hover:shadow-lg transition">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="p-2 bg-[#FFF0EB] rounded-full text-[#FF9EAA]">
+                            <i data-lucide="smartphone" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">チャット+通話</h3>
+                    </div>
+                    <div class="flex items-baseline gap-2 mb-2">
+                        <i data-lucide="star" class="w-5 h-5 text-[#FFB74D] fill-current"></i>
+                        <span class="text-lg text-gray-700">チャット+zoomか電話</span>
+                        <span class="text-2xl font-bold text-[#FF9EAA] ml-auto">¥1,000〜</span>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-2 pl-7">
+                        (相談有無、通話時間や時間帯により料金変動あり)
+                    </p>
+                </div>
+
+                <!-- Plan 4 -->
+                <div class="bg-white rounded-2xl shadow-md border-t-4 border-[#FF9EAA] p-8 hover:shadow-lg transition">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="p-2 bg-[#FFF0EB] rounded-full text-[#FF9EAA]">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">対面(出張対応 1回ごと)</h3>
+                    </div>
+                    <ul class="space-y-6">
+                        <li class="relative">
+                            <div class="flex items-start gap-2 mb-1">
+                                <i data-lucide="flower-2" class="w-5 h-5 text-[#FF9EAA] mt-0.5 shrink-0"></i>
+                                <div>
+                                    <div class="flex flex-wrap justify-between items-baseline gap-x-2">
+                                        <span class="text-sm md:text-base font-bold text-gray-700">雑談のみ 1回 出張費</span>
+                                        <span class="font-bold text-[#FF9EAA]">¥1,500<span class="text-xs text-gray-500 font-normal ml-1">(交通費実費)</span></span>
+                                    </div>
+                                    <p class="text-xs text-gray-500 mt-1">→遠方の方向け(近郊の方応相談)</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="relative">
+                            <div class="flex items-start gap-2 mb-1">
+                                <i data-lucide="flower-2" class="w-5 h-5 text-[#FF9EAA] mt-0.5 shrink-0"></i>
+                                <div>
+                                    <div class="flex flex-wrap justify-between items-baseline gap-x-2">
+                                        <span class="text-sm md:text-base font-bold text-gray-700">相談のみ 1回 出張費</span>
+                                        <span class="font-bold text-[#FF9EAA]">¥1,500<span class="text-xs text-gray-500 font-normal ml-1">(交通費実費)</span></span>
+                                    </div>
+                                    <p class="text-xs text-gray-500 mt-1">→近郊の方向け</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="relative">
+                            <div class="flex items-start gap-2 mb-1">
+                                <i data-lucide="flower-2" class="w-5 h-5 text-[#FF9EAA] mt-0.5 shrink-0"></i>
+                                <div>
+                                    <div class="flex flex-wrap justify-between items-baseline gap-x-2">
+                                        <span class="text-sm md:text-base font-bold text-gray-700">雑談+ご相談 1回 出張費</span>
+                                        <span class="font-bold text-[#FF9EAA]">¥2,500<span class="text-xs text-gray-500 font-normal ml-1">(交通費実費)</span></span>
+                                    </div>
+                                    <p class="text-xs text-gray-500 mt-1">→遠方の方向け(近郊の方応相談)</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Main CTA -->
+            <div class="mt-16 text-center">
+                <a href="#" class="btn-primary inline-block bg-[#FF9EAA] text-white text-lg font-bold py-4 px-12 rounded-full shadow-lg hover:bg-[#FF8C94] w-full md:w-auto">
+                    まずは気軽に相談してみる
+                </a>
+                <p class="text-xs text-gray-400 mt-3">※予約カレンダーへ移動します</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FAQ -->
+    <section class="py-20 bg-[#FEE9E9]">
+        <div class="max-w-2xl mx-auto px-6 fade-up">
+            <h2 class="serif text-center text-2xl text-gray-800 mb-12">よくある質問</h2>
+            <div class="space-y-6">
+                <!-- FAQ Items -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-bold text-gray-800 mb-2 flex items-start gap-3">
+                        <span class="text-[#FF9EAA]">Q.</span> 話す内容に制限はありますか？
+                    </h3>
+                    <p class="text-gray-600 text-sm pl-6 border-l-2 border-gray-100">
+                        A. どんな悩みでも大丈夫です。内容がまとまっていなくても、否定せずゆっくりお聞きします。
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-bold text-gray-800 mb-2 flex items-start gap-3">
+                        <span class="text-[#FF9EAA]">Q.</span> 子どもがいて家の中が騒がしくてもいい？
+                    </h3>
+                    <p class="text-gray-600 text-sm pl-6 border-l-2 border-gray-100">
+                        A. 問題ありません。生活音が入っても全く気にせずお話しください。お子様の声も日常の一部として受け止めます。
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-bold text-gray-800 mb-2 flex items-start gap-3">
+                        <span class="text-[#FF9EAA]">Q.</span> 話すのが苦手ですが大丈夫ですか？
+                    </h3>
+                    <p class="text-gray-600 text-sm pl-6 border-l-2 border-gray-100">
+                        A. はい。沈黙の時間も大事にします。無理に話そうとせず、あなたのペースで大丈夫です。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Closing -->
+    <section class="py-20 md:py-28 bg-white text-center px-6">
+        <div class="max-w-2xl mx-auto fade-up">
+            <p class="serif text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+                「誰かに話す」というだけで、<br>心はこんなに軽くなるんだ。<br>
+                きっと、あなたもそう感じられるはず。
+            </p>
+            <p class="text-gray-600 mb-10">
+                ここは、あなたがひとりにならなくていい場所。<br>
+                そっと寄り添う“第3の味方”として、いつでも待っています。
+            </p>
+            <a href="#offer" class="inline-block bg-[#FF9EAA] text-white px-10 py-4 rounded-full font-bold hover:bg-[#FF8C94] transition shadow-lg">
+                カウンセリングを申し込む
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#FEE9E9] text-gray-500 py-8 text-center text-xs">
+        <p>&copy; Kokoro no Mikata Counseling Room. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        document.querySelectorAll('.fade-up').forEach((el) => {
+            observer.observe(el);
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
